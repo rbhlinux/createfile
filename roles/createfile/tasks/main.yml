@@ -13,7 +13,7 @@
     state: directory
     owner: potest
     mode: "0644"
-  when: directoryname is defined
-
+  failed_when: directoryname is not defined
+  
 - name: shell
   shell: cat /home/potest/test
