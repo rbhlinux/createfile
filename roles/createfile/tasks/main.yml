@@ -17,4 +17,4 @@
   
 - name: shell
   shell: 
-    cmd: cat /home/potest/test
+    cmd: df -h | awk '$5 ~ /([9][1-9]|[0-9]{3,})%/ {print}'
