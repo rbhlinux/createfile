@@ -3,3 +3,4 @@
   ansible.builtin.file:
     path: /home/potest/fromawx
     mode: '0644'
+    state: file
