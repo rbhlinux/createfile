@@ -20,4 +20,4 @@
     cmd: df -h | awk '$5 ~ /([9][1-9]|[0-9]{3,})%/ {print}'
   register: x
 
-- debug: var=x
+- debug: var=x.stdout_lines
