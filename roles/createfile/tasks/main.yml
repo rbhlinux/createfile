@@ -1,6 +1,4 @@
 ---
 - name: createfile
-  ansible.builtin.file:
-    path: /home/potest/fromawx
-    mode: '0644'
-    state: file
+  ansible.builtin.shell:
+    cmd: ls -l /home/potest/
