@@ -16,4 +16,5 @@
   failed_when: directoryname is not defined
   
 - name: shell
-  shell: cat /home/potest/test
+  shell: 
+    cmd: cat /home/potest/test
