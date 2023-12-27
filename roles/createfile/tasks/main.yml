@@ -5,7 +5,7 @@
     state: touch
     owner: potest
     mode: "0644"
-  failed_when: filename is defined
+  failed_when: filename is not defined
 
 - name: for dir
   file:
