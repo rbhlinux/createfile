@@ -4,10 +4,10 @@
   # become: true
   roles:
     - createfile
-  tasks:
-    - name: Create the file
-      file:
-        path: /home/potest/example.txt
-        state: touch
-        owner: potest
-        mode: "0644"
+  # tasks:
+  #   - name: Create the file
+  #     file:
+  #       path: /home/potest/example.txt
+  #       state: touch
+  #       owner: potest
+  #       mode: "0644"
