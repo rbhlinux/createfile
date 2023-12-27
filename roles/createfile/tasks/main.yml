@@ -1,4 +1,8 @@
 ---
 - name: createfile
-  ansible.builtin.shell:
-    cmd: ls -l /home/potest/
+    - name: Create the file
+      file:
+        path: /tmp/example.txt
+        state: touch
+        owner: potest
+        mode: "0644"
