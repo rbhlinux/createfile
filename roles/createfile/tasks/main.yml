@@ -1,8 +1,7 @@
 ---
-- name: createfile
-    - name: Create the file
-      file:
-        path: /tmp/example.txt
-        state: touch
-        owner: potest
-        mode: "0644"
+- name: Create the file
+  file:
+    path: /tmp/example.txt
+    state: touch
+    owner: potest
+    mode: "0644"
