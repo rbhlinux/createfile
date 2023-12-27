@@ -1,5 +1,5 @@
 ---
-- name: Create the file
+- name: inside task
   file:
     path: /tmp/example.txt
     state: touch
