@@ -1,4 +1,6 @@
 ---
-- hosts: "{{ host_list }}"
-  tasks:
-    - 
+- name: run role
+  hosts: "{{ host_list }}"
+  become: true
+  roles:
+    - createfile
