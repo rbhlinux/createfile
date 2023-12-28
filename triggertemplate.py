@@ -9,7 +9,7 @@ survey_variables = {
 
 tower_host = 'http://172.206.194.198'  # Replace with your AWX Tower host URL
 username = 'admin'  # Replace with your AWX Tower username
-password = 'pass#2324'  # Replace with your AWX Tower password
+password = 'Hackathon#2324'  # Replace with your AWX Tower password
 user_id = 1  # Replace with the user ID
 
 # Token creation data
@@ -52,11 +52,12 @@ headers = {
     'Content-Type': 'application/json'
 }
 
-time.sleep(200)
+time.sleep(120)
 latestjob_url = f'{tower_host}/api/v2/job_templates/{template_id}/jobs/?order_by=-created'
 latestjob_response =  requests.get(latestjob_url, headers=headers, verify=False)
 latestjob = latestjob_response.json()['results']
 job_id = latestjob[0]['id']
+print(f"Job ID: {job_id}")
 #block for job
 
 jobid_url = f'{tower_host}/api/v2/job_events/?job_id={job_id}'
