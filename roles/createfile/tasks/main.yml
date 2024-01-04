@@ -3,7 +3,7 @@
   file:
     path: "{{ filename }}"
     state: touch
-    owner: potest
+    owner: ansible
     mode: "0644"
   failed_when: filename is not defined
 
@@ -11,7 +11,7 @@
   file:
     path: "{{ directoryname }}"
     state: directory
-    owner: potest
+    owner: ansible
     mode: "0644"
   failed_when: directoryname is not defined
   
