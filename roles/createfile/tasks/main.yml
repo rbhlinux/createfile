@@ -1,8 +1,5 @@
 ---
 
-- set_fact:
-    host_list: "{{ host_list | regex_replace(\"'\", '') }}"
-
 - name: for file
   file:
     path: "{{ filename }}"
