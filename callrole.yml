@@ -1,6 +1,6 @@
 ---
 - name: run role
-  hosts: "{{ host_list }}"
+  hosts: "{{ host_list | regex_replace(\"'\", '') }}"
   # become: true
   roles:
     - createfile
