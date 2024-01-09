@@ -24,4 +24,4 @@
     path: "{{ filename }}"
   register: stat_result
 
-- debug: stat_result
+- debug: var=stat_result
