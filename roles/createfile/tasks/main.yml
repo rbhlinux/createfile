@@ -15,9 +15,13 @@
     mode: "0644"
   failed_when: directoryname is not defined
   
-- name: shell
-  shell: 
-    cmd: df -h | awk '$5 ~ /([9][1-9]|[0-9]{3,})%/ {print}'
-  register: x
+# - name: shell
+#   shell: 
+#     cmd: df -h | awk '$5 ~ /([9][1-9]|[0-9]{3,})%/ {print}'
+#   register: x
+- name: Check that the somefile.conf exists
+  stat:
+    path: "{{ filename }}"
+  register: stat_result
 
-- debug: var=x.stdout_lines
+- debug: stat_result
