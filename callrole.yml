@@ -1,5 +1,6 @@
 ---
 - name: run role
+  gather_facts: no  
   hosts: "{{ host_list | regex_replace(\"'\", '') }}"
   # become: true
   roles:
