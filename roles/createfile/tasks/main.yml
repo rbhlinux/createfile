@@ -18,8 +18,11 @@
   when: directoryname is defined
   register: directory
 
-  - debug: var=file
-  - debug: var=directory
+- debug: var=file
+  when: file is defined
+  
+- debug: var=directory
+  when: directory is defined
   
 # - name: shell
 #   shell: 
