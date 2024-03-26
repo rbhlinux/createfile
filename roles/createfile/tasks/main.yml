@@ -8,6 +8,7 @@
     mode: "0644"
   when: filename is defined
   register: file
+  ignore_errors: yes
 
 - name: for dir
   file:
@@ -17,12 +18,16 @@
     mode: "0644"
   when: directoryname is defined
   register: directory
+  ignore_errors: yes
 
 - debug: var=file
   when: file is defined
+  ignore_errors: yes
   
 - debug: var=directory
   when: directory is defined
+  ignore_errors: yes
+
   
 # - name: shell
 #   shell: 
